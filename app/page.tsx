@@ -493,7 +493,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Farm Location</h4>
-                    <p className="text-gray-600">Village Road, Agricultural District<br />Organic Valley, State 123456</p>
+                    <p className="text-gray-600">Molasur Village<br />(Backside to Tindivanam ITI Government College)<br />Tindivanam Taluka, Villupuram</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -502,7 +502,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
-                    <p className="text-gray-600">+91 98765 43210<br />+91 87654 32109</p>
+                    <p className="text-gray-600">+91 9585903615</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -516,48 +516,35 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="bg-white rounded-2xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <div className="p-6 bg-green-600 text-white">
+                <h3 className="text-2xl font-bold mb-2">Find Us on Map</h3>
+                <p className="text-green-100">Visit our organic farm and see our sustainable practices in action</p>
+              </div>
+              <div className="h-96">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.123456789!2d79.6234567!3d11.9876543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDU5JzE1LjYiTiA3OcKwMzcnMjQuNCJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Eyal Vanam Farm Location"
+                ></iframe>
+              </div>
+              <div className="p-6">
+                <div className="flex items-center justify-between">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
-                    <input 
-                      type="text" 
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
-                      placeholder="Your name"
-                    />
+                    <h4 className="font-semibold text-gray-900">Farm Visits Welcome</h4>
+                    <p className="text-sm text-gray-600">Call ahead to schedule your visit</p>
                   </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
-                    <input 
-                      type="tel" 
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
-                      placeholder="Your phone"
-                    />
-                  </div>
+                  <Button className="bg-green-600 hover:bg-green-700">
+                    <Phone className="h-4 w-4 mr-2" />
+                    Call Now
+                  </Button>
                 </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                  <input 
-                    type="email" 
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
-                    placeholder="Your email"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                  <textarea 
-                    rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
-                    placeholder="Tell us about your requirements..."
-                  ></textarea>
-                </div>
-                <Button className="w-full bg-green-600 hover:bg-green-700 py-3 text-lg">
-                  Send Message
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </form>
+              </div>
             </div>
           </div>
         </div>
