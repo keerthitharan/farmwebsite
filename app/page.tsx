@@ -190,12 +190,6 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-6 border border-green-100">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600 mb-1">500+</div>
-                  <div className="text-sm text-gray-600">Happy Customers</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
