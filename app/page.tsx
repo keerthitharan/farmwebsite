@@ -131,7 +131,6 @@ export default function Home() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
               <img src="/logo1.png" alt="Eyal Vanam Logo" className="h-12 w-12 object-cover rounded-full border-2 border-green-600 p-1" style={{ objectPosition: 'center' }} />
-              <span className="text-2xl font-bold text-gray-900">Eyal Vanam</span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#about" className="text-gray-700 hover:text-green-600 transition-colors font-medium">About</a>
@@ -192,9 +191,8 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
               <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-6 border border-green-100">
-                <div className="flex items-center justify-center">
-                  <img src="/logo1.png" alt="Eyal Vanam Logo" className="h-16 w-16 object-cover rounded-full border-2 border-green-600" style={{ objectPosition: 'center' }} />
-                </div>
+                <div className="text-2xl font-bold text-green-600 mb-2">500+</div>
+                <div className="text-sm text-gray-600">Happy Customers</div>
               </div>
             </div>
           </div>
