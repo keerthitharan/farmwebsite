@@ -184,15 +184,14 @@ export default function Home() {
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="https://images.pexels.com/photos/1459339/pexels-photo-1459339.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                  alt="Eyal Vanam Farm" 
+                  src="/image.png" 
+                  alt="Hands holding seeds - Eyal Vanam Farm" 
                   className="w-full h-96 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-6 border border-green-100">
-                <div className="text-2xl font-bold text-green-600 mb-2">500+</div>
-                <div className="text-sm text-gray-600">Happy Customers</div>
+              <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4 border border-green-100">
+                <img src="/logo1.png" alt="Eyal Vanam Logo" className="h-16 w-16 object-cover rounded-full border-2 border-green-600" style={{ objectPosition: 'center' }} />
               </div>
             </div>
           </div>
