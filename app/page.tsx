@@ -130,17 +130,24 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
-              <img src="/logo1.png" alt="Eyal Vanam Logo" className="h-12 w-12 object-cover rounded-full border-2 border-green-600 p-1" style={{ objectPosition: 'center' }} />
+              <Leaf className="h-8 w-8 text-green-600" />
+              <span className="text-2xl font-bold text-gray-900">Eyal Vanam</span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#about" className="text-gray-700 hover:text-green-600 transition-colors font-medium">About</a>
-              <a href="#products" className="text-gray-700 hover:text-green-600 transition-colors font-medium">Products</a>
+              <a href="#gallery" className="text-gray-700 hover:text-green-600 transition-colors font-medium">Gallery</a>
               <a href="#services" className="text-gray-700 hover:text-green-600 transition-colors font-medium">Services</a>
               <Link href="/facilities" className="text-gray-700 hover:text-green-600 transition-colors font-medium">Facilities</Link>
               <a href="#contact" className="text-gray-700 hover:text-green-600 transition-colors font-medium">Contact</a>
               <Button className="bg-green-600 hover:bg-green-700">
                 <Phone className="h-4 w-4 mr-2" />
                 Call Now
+              </Button>
+            </div>
+            <div className="md:hidden">
+              <Button className="bg-green-600 hover:bg-green-700">
+                <Phone className="h-4 w-4 mr-2" />
+                Call
               </Button>
             </div>
           </div>
@@ -151,9 +158,15 @@ export default function Home() {
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-600/10 to-emerald-600/10"></div>
         <div className="max-w-7xl mx-auto relative">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-
+          <div className="text-center mb-12">
+            <div className="flex justify-center mb-8">
+              <img 
+                src="/logo2.png" 
+                alt="Eyal Vanam Logo" 
+                className="h-32 w-auto object-contain"
+              />
+            </div>
+            <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                 Fresh from
                 <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent block">
@@ -165,8 +178,8 @@ export default function Home() {
                 Experience the pure taste of nature with our organically grown vegetables. 
                 Cultivated with love, harvested with care, delivered with pride.
               </p>
-
-              <div className="flex items-center space-x-8 text-sm text-gray-600">
+              
+              <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-sm text-gray-600">
                 <div className="flex items-center">
                   <Leaf className="h-4 w-4 text-green-500 mr-2" />
                   100% Organic
@@ -179,16 +192,6 @@ export default function Home() {
                   <Heart className="h-4 w-4 text-red-500 mr-2" />
                   Grown with Love
                 </div>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src="/image.png" 
-                  alt="Hands holding seeds - Eyal Vanam Farm" 
-                  className="w-full h-96 object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
             </div>
           </div>
@@ -255,75 +258,7 @@ export default function Home() {
       </section>
 
       {/* Products Section */}
-      <section id="products" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-50 to-emerald-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Fresh Produce
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Seasonal vegetables grown with care, harvested at peak freshness
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {products.map((product, index) => (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white">
-                <div className="relative overflow-hidden rounded-t-lg">
-                  <img 
-                    src={product.image} 
-                    alt={product.name}
-                    className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110"
-                  />
-                  <div className="absolute top-4 right-4">
-                    <Badge className="bg-green-600 text-white">Fresh</Badge>
-                  </div>
-                </div>
-                <CardHeader>
-                  <CardTitle className="text-lg">{product.name}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">
-                    {product.description}
-                  </CardDescription>
-                  <Button className="w-full mt-4 bg-green-600 hover:bg-green-700">
-                    Order Now
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Services
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Comprehensive farming solutions focused on quality and sustainability
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 text-center p-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white mx-auto mb-6">
-                  {service.icon}
-                </div>
-                <CardTitle className="text-xl mb-4">{service.title}</CardTitle>
-                <CardDescription className="text-base leading-relaxed">
-                  {service.description}
-                </CardDescription>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <section id="gallery" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-50 to-emerald-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -428,6 +363,74 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Comprehensive farming solutions focused on quality and sustainability
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index) => (
+              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 text-center p-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white mx-auto mb-6">
+                  {service.icon}
+                </div>
+                <CardTitle className="text-xl mb-4">{service.title}</CardTitle>
+                <CardDescription className="text-base leading-relaxed">
+                  {service.description}
+                </CardDescription>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-50 to-emerald-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Fresh Produce
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Seasonal vegetables grown with care, harvested at peak freshness
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {products.map((product, index) => (
+              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white">
+                <div className="relative overflow-hidden rounded-t-lg">
+                  <img 
+                    src={product.image} 
+                    alt={product.name}
+                    className="w-full h-48 object-cover transition-transform duration-300 hover:scale-110"
+                  />
+                  <div className="absolute top-4 right-4">
+                    <Badge className="bg-green-600 text-white">Fresh</Badge>
+                  </div>
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-lg">{product.name}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-base">
+                    {product.description}
+                  </CardDescription>
+                  <Button className="w-full mt-4 bg-green-600 hover:bg-green-700">
+                    Order Now
+                  </Button>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
